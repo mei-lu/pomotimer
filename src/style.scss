@@ -1,0 +1,59 @@
+@mixin center-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    font-family: monospace;
+    background-color: rgb(197, 212, 187);
+}
+.timer {
+    font-size: 5rem;
+    background-color: #ffffff;
+    border-radius: 3000px;
+    width: 6em;
+    height: 6em;
+    margin: 25vh 25vw;
+    max-width:100%;
+    max-height:100%;
+    position:absolute; /*it can be fixed too*/
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+    overflow:auto;
+    @include center-item;
+}
+.settings {
+    @include center-item;
+    padding: 1rem;
+}
+
+.adjustment {
+    font-size: 2rem;
+}
+
+.timer-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.time-display {
+    margin: 2rem;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+button:focus {
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
